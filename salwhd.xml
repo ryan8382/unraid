@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Sal</Name>
+  <Description>
+    Sal uses nginx as web browser and uses postgres as SQL backend. It is used for Mac Machine management. The postgres is a separate Docker image. Run that one first. I am using the docker container maintained by MacAdmins.
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/macadmins/sal/dockerfile/</Registry>
+  <Repository>ryan8382/unraid</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/usr/local/sal_data/plugins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/usr/localsal_data/settings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+    <Version></Version>
+  <WebUI></WebUI>
+  <Banner>http://imgur.com/4zAoeGW</Banner>
+  <Icon>http://imgur.com/4zAoeGW</Icon>
+</Container>
