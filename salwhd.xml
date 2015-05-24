@@ -37,7 +37,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/usr/localsal_data/settings</ContainerDir>
+      <ContainerDir>/usr/local/sal_data/settings</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
