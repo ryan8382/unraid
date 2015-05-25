@@ -27,8 +27,8 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/db</ContainerDir>
+      <HostDir>/DB</HostDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>

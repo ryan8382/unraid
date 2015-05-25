@@ -5,7 +5,7 @@
     Sal uses nginx as web browser and uses postgres as SQL backend. It is used for Mac Machine management. The postgres is a separate Docker image. Run that one first. I am using the docker container maintained by MacAdmins.
   </Description>
   <Registry>https://registry.hub.docker.com/u/macadmins/sal</Registry>
-  <Repository>macadmins/sal/</Repository>
+  <Repository>macadmins/sal</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
@@ -40,17 +40,17 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/usr/local/sal_data/plugins</ContainerDir>
+      <ContainerDir>/home/docker/sal/plugins</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/usr/local/sal_data/settings</ContainerDir>
+      <ContainerDir>/home/docker/sal/sal</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
     <Version></Version>
-  <WebUI></WebUI>
+ <WebUI>http://[IP]:[PORT]/</WebUI>
   <Banner>http://imgur.com/4zAoeGW</Banner>
   <Icon>http://imgur.com/4zAoeGW</Icon>
 </Container>
