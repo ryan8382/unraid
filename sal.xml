@@ -23,10 +23,18 @@
       </Port>
     </Publish>
   </Networking>
-  <Environment>
+    <Environment>
     <Variable>
-      <Name></Name>
-      <Value></Value>
+      <Name>DB_NAME</Name>
+      <Value>sal</Value>
+    </Variable>
+     <Variable>
+      <Name>DB_USER</Name>
+      <Value>admin</Value>
+    </Variable>
+     <Variable>
+      <Name>DB_PASS</Name>
+      <Value>password</Value>
     </Variable>
   </Environment>
   <Data>
