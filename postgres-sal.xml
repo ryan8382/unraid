@@ -8,6 +8,9 @@
   <Repository>grahamgilbert/postgres</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+  <Networking>
+    <Mode>none</Mode>
+  </Networking>
   <Environment>
     <Variable>
       <Name>DB_NAME</Name>
