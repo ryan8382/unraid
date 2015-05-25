@@ -9,7 +9,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>none</Mode>
+    <Mode>host</Mode>
   </Networking>
   <Environment>
     <Variable>
@@ -27,8 +27,8 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/DB</HostDir>
-      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
+      <HostDir>/mnt/user/appdata/postgres-sal/data</HostDir>
+      <ContainerDir>/DB</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
