@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>postgres-sal</Name>
+  <Description>
+    Sal uses nginx as web browser and uses postgres as SQL backend. It is used for Mac Machine management. The postgres is a separate Docker image. Run that one first. I am using the docker container maintained by MacAdmins.
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/grahamgilbert/postgres/</Registry>
+  <Repository>grahamgilbert/postgres</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>DB_NAME</Name>
+      <Value>sal</Value>
+    </Variable>
+     <Variable>
+      <Name>DB_USER</Name>
+      <Value>admin</Value>
+    </Variable>
+     <Variable>
+      <Name>DB_PASS</Name>
+      <Value>password</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+    <Version></Version>
+  <WebUI></WebUI>
+  <Banner>http://imgur.com/4zAoeGW</Banner>
+  <Icon>http://imgur.com/4zAoeGW</Icon>
+</Container>
