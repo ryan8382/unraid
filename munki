@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>Sal</Name>
+  <Name>munki</Name>
   <Description>
-    Sal uses nginx as web server and uses postgres as SQL backend(postgres-sql). It is used for Mac Machine management. The postgres is a separate Docker image. Run that one first. 
-    I am using the docker container maintained by MacAdmins.
-    
-    Under advanced there are the DB settings. 
-  </Description>
-  <Registry>https://registry.hub.docker.com/u/macadmins/sal</Registry>
-  <Repository>macadmins/sal</Repository>
+    A container that serves static files at http://munki/repo using nginx.
+
+nginx expects the munki repo content to be located at /munki_repo. Use a data container and the --volumes-from option to add files.
+  <Registry>https://registry.hub.docker.com/u/macadmins/munki</Registry>
+  <Repository>macadmins/munki</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>89</HostPort>
-        <ContainerPort>8000</ContainerPort>
+        <HostPort>8000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -48,6 +51,7 @@
     </Volume>
   </Data>
     <Version></Version>
- <WebUI>http://[IP]:[PORT]89/</WebUI>
+ <WebUI>http://[IP]:[PORT]/</WebUI>
+  <Banner>http://imgur.com/4zAoeGW</Banner>
   <Icon>http://imgur.com/4zAoeGW</Icon>
 </Container>

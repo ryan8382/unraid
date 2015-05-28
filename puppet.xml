@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>puppet</Name>
+  <Description>
+    Docker image for puppet server
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/macadmins/puppetmaster/</Registry>
+  <Repository>macadmins/puppetmaster</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+    <Port>
+        <HostPort>8140</HostPort>
+        <ContainerPort>8140</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>  
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/puppet/</HostDir>
+      <ContainerDir></ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+    <Version></Version>
+  <WebUI></WebUI>
+  <Banner>http://imgur.com/4zAoeGW</Banner>
+  <Icon>http://imgur.com/4zAoeGW</Icon>
+</Container>
