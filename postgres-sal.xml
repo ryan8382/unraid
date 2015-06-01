@@ -13,12 +13,22 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
+<<<<<<< HEAD
     <Mode>bridge</Mode>
     <Port>
+=======
+  <Mode>bridge</Mode>
+  <Publish>
+     <Port>
+>>>>>>> pr/1
         <HostPort>5432</HostPort>
         <ContainerPort>5432</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+<<<<<<< HEAD
+=======
+    </Publish>
+>>>>>>> pr/1
   </Networking>
   
   <Environment>
@@ -38,7 +48,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/postgres-sal/data</HostDir>
-      <ContainerDir>/DB</ContainerDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
