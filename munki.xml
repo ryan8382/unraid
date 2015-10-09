@@ -5,6 +5,8 @@
     Munki is a set of tools that, used together with a webserver-based repository of packages [br]
     and package metadata, can be used by OS X administrators to manage software installs [br]
     (and in many cases removals) on OS X client machines.[br]
+    https://www.munki.org/munki/
+</Description>  
   <Registry>https://registry.hub.docker.com/u/macadmins/munki</Registry>
   <Repository>macadmins/munki</Repository>
   <BindTime>true</BindTime>
