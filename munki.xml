@@ -15,20 +15,15 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8000</HostPort>
+        <HostPort>80</HostPort>
         <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8443</HostPort>
-        <ContainerPort>443</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/munki_repo</HostDir>
       <ContainerDir>/munki_repo</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
