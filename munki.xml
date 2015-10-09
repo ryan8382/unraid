@@ -2,9 +2,10 @@
 <Container>
   <Name>munki</Name>
   <Description>
-    A container that serves static files at http://munki/repo using nginx.
-
-nginx expects the munki repo content to be located at /munki_repo. Use a data container and the --volumes-from option to add files.
+    Munki is a set of tools that, used together with a webserver-based repository of packages 
+    and package metadata, can be used by OS X administrators to manage software installs 
+    (and in many cases removals) on OS X client machines.
+    https://www.munki.org/munki/
   <Registry>https://registry.hub.docker.com/u/macadmins/munki</Registry>
   <Repository>macadmins/munki</Repository>
   <BindTime>true</BindTime>
@@ -24,34 +25,14 @@ nginx expects the munki repo content to be located at /munki_repo. Use a data co
       </Port>
     </Publish>
   </Networking>
-    <Environment>
-    <Variable>
-      <Name>DB_NAME</Name>
-      <Value>sal</Value>
-    </Variable>
-     <Variable>
-      <Name>DB_USER</Name>
-      <Value>admin</Value>
-    </Variable>
-     <Variable>
-      <Name>DB_PASS</Name>
-      <Value>password</Value>
-    </Variable>
-  </Environment>
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/home/docker/sal/plugins</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/home/docker/sal/sal</ContainerDir>
+      <ContainerDir>/munki_repo</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
     <Version></Version>
  <WebUI>http://[IP]:[PORT]/</WebUI>
-  <Banner>http://imgur.com/4zAoeGW</Banner>
-  <Icon>http://imgur.com/4zAoeGW</Icon>
+  <Icon>http://imgur.com/ItGcU3F</Icon>
 </Container>
