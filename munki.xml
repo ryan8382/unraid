@@ -8,7 +8,7 @@
     https://www.munki.org/munki/
 </Description>  
   <Registry>https://registry.hub.docker.com/u/ryan8382/munki</Registry>
-  <Repository>macadmins/munki</Repository>
+  <Repository>ryan8382/munki</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
