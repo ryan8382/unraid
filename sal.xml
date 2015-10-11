@@ -15,8 +15,8 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>89</HostPort>
-        <ContainerPort>8000</ContainerPort>
+        <HostPort>8001</HostPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -35,18 +35,6 @@
       <Value>password</Value>
     </Variable>
   </Environment>
-  <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/home/docker/sal/plugins</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/home/docker/sal/sal</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
     <Version></Version>
  <WebUI>http://[IP]:[PORT]89/</WebUI>
   <Icon>http://imgur.com/4zAoeGW</Icon>
