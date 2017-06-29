@@ -36,6 +36,6 @@
     </Variable>
   </Environment>
     <Version></Version>
- <WebUI>http://[IP]:[PORT]89/</WebUI>
+ <WebUI>http://[IP]:[PORT]/</WebUI>
   <Icon>http://imgur.com/4zAoeGW</Icon>
 </Container>
